@@ -10,4 +10,4 @@ Setting up an Express server just like before with http.createServer on vanilla 
 2. Require express
 3. Create an app instance using express()
 4. Set a port
-5. Start the server with app.listen(...)
+5. Start the server with app.listen(...) 
