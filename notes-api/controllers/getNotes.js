@@ -1,4 +1,4 @@
-const {ensureNoteFile, parseNotes} = require("../../lib/index.js");
+const {ensureNoteFile, parseNotes} = require("../lib/index.js");
 
 // GET /notes
 const getNotes = async (req, res, next) => {

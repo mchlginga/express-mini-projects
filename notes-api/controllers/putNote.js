@@ -4,7 +4,7 @@ const {
     ensureNoteFile,
     parseNotes,
     PATHS
-} = require("../../lib/index.js");
+} = require("../lib/index.js");
 
 const putNote = async (req, res, next) => {
     try {

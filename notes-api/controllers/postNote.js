@@ -5,7 +5,7 @@ const {
     parseNotes,
     normalizeTitle,
     PATHS
-} = require("../../lib/index.js");
+} = require("../lib/index.js");
 
 // POST /notes
 const postNote = async (req, res, next) => {
