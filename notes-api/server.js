@@ -11,7 +11,7 @@ app.set("json spaces", 2);
 app.use(express.json());
 app.use(logger);
 
-app.use("/notes", notesRouter); // routes
+app.use("/api/notes", notesRouter); // routes
 
 app.use(errorhandler);
 
