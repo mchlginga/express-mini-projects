@@ -1,11 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 3000;
 
 const notesRouter = require("./routes/notes.js");
 const logger = require("./middleware/logger.js");
 const errorhandler = require("./middleware/errorhandler.js");
+const config = require("./config/index.js");
 
+const port = config.port;
 app.set("json spaces", 2);
 
 app.use(express.json());
