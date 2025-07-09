@@ -10,6 +10,7 @@ Learning Express.js through hands-on mini projects after mastering vanilla JavaS
 2. **Notes API** - Full CRUD operations with file storage
 3. **User Management API** - User registration, authentication, and management (JSON file storage)
 4. **User Management API MongoDB** - Same functionality upgraded with MongoDB database
+5. **Notes API Mongoose** - 
 
 ---
 
