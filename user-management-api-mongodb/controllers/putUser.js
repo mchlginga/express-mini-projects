@@ -14,7 +14,7 @@ const putUser = async (req, res, next) => {
         }
 
         const db = getDB();
-        const users = db.collection("user");
+        const users = db.collection("users");
         const {id} = req.params;
         const {name, email, password} = req.body;
 
