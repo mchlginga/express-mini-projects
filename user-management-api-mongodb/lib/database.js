@@ -1,4 +1,5 @@
 const {MongoClient} = require("mongodb");
+const config = require("../config/index.js");
 
 let client;
 let db;
@@ -7,7 +8,7 @@ const connectDB = async () => {
     try {
         client = new MongoClient(process.env.MONGO_URI);
         await client.connect();
-        db = client.db("usersDB");
+        db = client.db(config.dbName);
         console.log("Connected to MongoDB");
     } catch (error) {
         console.error("Database connection failed:", error);
