@@ -1,20 +1,19 @@
-
+const {getDB} = require("../lib/index.js");
+const {ObjectId} = require("mongodb");
 
 const deleteUser = async (req, res, next) => {
     try {
-        await ensureUsersFile();
-        let users = await parseUsersFile();
-        const {id} = req.params;
-        const initialLength = users.length;
+        const db = getDB();
+        const users = db.collection("users");
+        const { id } = req.params;
 
-        // filter user with matching id
-        users = users.filter(user => user.id !== Number(id));
-        if (initialLength === users.length) {
-            return res.status(404).json({error: "User not found."});
+        const result = await users.deleteOne({ _id: new ObjectId(id)});
+
+        if (result === 0) {
+            return res.status(404).json({ message: "User not found."});
         }
 
-        await saveUsers(users);
-        res.status(200).json({message: "User deleted successfully."});
+        res.status(200).json({ message: "User deleted successfully."});
 
     } catch (error) {
         next(error);
