@@ -3,10 +3,14 @@ const router = express.Router();
 
 const {
     postNote,
-    getNotes
+    getNotes,
+    getNoteById,
+    putNote
 } = require("../controllers/notesControllers.js");
 
 router.post("/", postNote);
 router.get("/", getNotes);
+router.get("/:id", getNoteById);
+router.put("/:id", putNote);
 
 module.exports = router;
