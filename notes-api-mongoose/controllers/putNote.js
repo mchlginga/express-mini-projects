@@ -5,13 +5,13 @@ const putNote = async (req, res, next) => {
         const { id } = req.params;
         const { title, body } = req.body;
 
-        const updatedNote = await Note.findByIdAndUpdate(
+        const updateNote = await Note.findByIdAndUpdate(
             id,
             { title, body},
             { new: true, runValidators: true}
         );
 
-        if (!updatedNote) {
+        if (!updateNote) {
             return res.status(404).json({ message: "Note not found."});
         }
 
