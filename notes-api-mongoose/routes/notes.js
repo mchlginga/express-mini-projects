@@ -5,9 +5,11 @@ const {
     postNote,
     getNotes,
     getNoteById,
-    putNote
+    putNote,
+    searchNoteByTitle
 } = require("../controllers/notesControllers.js");
 
+router.get("/search", searchNoteByTitle);
 router.post("/", postNote);
 router.get("/", getNotes);
 router.get("/:id", getNoteById);

@@ -8,7 +8,7 @@ const fs = require("fs");
 const notesRouter = require("./routes/notes.js");
 const {PATHS} = require("./lib/constant.js");
 
-app = express();
+const app = express();
 app.set("json spaces", 2);
 
 app.use(helmet());
